@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+
+        <title>三尺剑</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body{ text-align:center} 
+		#meishayong{
+			margin:0 auto;
+			width: 1037px;
+			height: 500px;
+                       
+		}
+
+		#fenlei{
+			float: left;
+			width: 187px;
+			height: 500px;
+			background: red;
+			
+		}
+		#tupian{
+			
+			float: left;
+			width: 850px;
+			height: 500px;
+			background: yellow;
+		}
+		#id1,#id2,#id3,#id4,#id5,#id6,#id7,#id8{
+			
+			margin: 0 auto;
+			width: 187px;
+			height: 55px;
+			color:#FFF;
+			font-size:18px;
+		}
+		a:link,a:visited{
+ 		text-decoration:none;
+                }
+               
+	</style>
+	<script language =javascript >
+	var curIndex=0;
+
+	var timeInterval=1000;
+	var arr=new Array();
+	arr[0]="photos\1.jpg";
+	arr[1]="photos\2.jpg";
+	arr[2]="photos\3.jpg";
+	arr[3]="photos\4.jpg";
+	arr[4]="photos\5.jpg";
+	setInterval(changeImg,timeInterval);
+	function changeImg()
+	{
+    	var obj=document.getElementById("obj");
+    	if (curIndex===arr.getLength-1) 
+    	{
+        curIndex=0;
+    	}
+    else
+    	{
+        curIndex+=1;
+    	}
+    obj.src=arr[curIndex];
+	}
+</script>
+
+
+    </head>
+    <body>
+        <div>TODO write content</div>
+         <div id="meishayong">
+    	<div id="fenlei">
+    		<div id="id1"><br>全部分类</div>
+    		<a href="http://www.baidu.com/"><div id="id2"><br>演唱会  ></div></a>
+    		<a href="http://www.baidu.com/"><div id="id3"><br>音乐会  ></div></a>
+    		<a href="http://www.baidu.com/"><div id="id4"><br>动漫  ></div></a>
+    		<a href="http://www.baidu.com/"><div id="id5"><br>话剧  ></div></a>
+    		<a href="http://www.baidu.com/"><div id="id6"><br>舞蹈  ></div></a>
+    		<a href="https://www.douban.com/"><div id="id7"><br>电影  ></div></a>
+    		<a href="http://www.baidu.com/"><div id="id8"><br>体育  ></div></a>
+    	</div>
+		<div id="tupian"><img id=obj src ="photos\1.jpg"  ></div>
+    </div>
+    </body>
+</html>
